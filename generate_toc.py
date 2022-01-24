@@ -111,6 +111,7 @@ def print_toc(toc, notebook=None, insert=False, path=None):
     """    
     if not insert:
         for t in toc:
+            t = t.strip("\n")
             print(t)
     else:
         if re.search("# Summary", notebook["cells"][0]["source"][0]):
